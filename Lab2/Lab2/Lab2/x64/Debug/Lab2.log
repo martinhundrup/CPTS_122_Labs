@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\hundr\OneDrive\Documents\School_Work\2024_SPRING\TA_122\Lab2\Lab2\Lab2\main.c(99,11): warning C4129: 'p': unrecognized character escape sequence
+C:\Users\hundr\OneDrive\Documents\School_Work\2024_SPRING\TA_122\Lab2\Lab2\Lab2\main.c(115,11): warning C4129: 'p': unrecognized character escape sequence
+  Lab2.vcxproj -> C:\Users\hundr\OneDrive\Documents\School_Work\2024_SPRING\TA_122\Lab2\Lab2\x64\Debug\Lab2.exe
