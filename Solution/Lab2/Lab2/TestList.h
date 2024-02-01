@@ -26,25 +26,27 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
+#include "Lab2.h"
+
 // ensures the functionality of makeNode()
-void testMakeNode();
+Boolean testMakeNode();
 
 // ensures the functionality of insertContactInOrder()
-void testInsertContactInOrder();
+Boolean testInsertContactInOrder();
 
 // ensures the functionality of deleteContact()
-void testDeleteContact();
+Boolean testDeleteContact();
 
 // ensures the functionality of editContact()
-void testEditContact();
+Boolean testEditContact();
 
 // ensures the functionality of loadContacts()
-void testLoadContacts();
+Boolean testLoadContacts();
 
 // ensures the functionality of storeContacts()
-void testStoreContacts();
+Boolean testStoreContacts();
 
 // ensures the functionality of printLists()
-void testPrintList();
+Boolean testPrintList();
 
 #endif

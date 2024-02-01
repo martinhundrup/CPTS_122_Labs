@@ -1,4 +1,20 @@
 #include "Lab2.h"
+#include "TestList.h"
+
+
+// runs all test and outputs the results to the screen
+// a 1 means it passed, a 0 means it failed
+// note that the print list and edit contact tests are expected to fail
+void runTests() {
+
+	printf("make node test: %d\n", testMakeNode());
+	printf("insert contact in order: %d\n", testInsertContactInOrder());
+	printf("delete contact: %d\n", testDeleteContact());
+	printf("edit contact: %d\n", testEditContact());
+	printf("load contact: %d\n", testLoadContacts());
+	printf("store contact: %d\n", testStoreContacts());
+	printf("print list: %d\n", testPrintList());
+}
 
 /*
 Build an application, in C, for storing contact information (you must have one
@@ -348,7 +364,7 @@ Boolean storeContacts(FILE* infile, Node* pList) {
 	// edge case 1: the list is empty
 	if (pList == NULL) {
 
-		return TRUE;
+		return FALSE;
 	}
 
 	// loop to store

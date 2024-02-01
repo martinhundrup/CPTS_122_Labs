@@ -18,6 +18,9 @@
     <ClInclude Include="Lab2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TestList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab2.c">
@@ -26,9 +29,18 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestList.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="infile.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="testinfile.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="testoutfile.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

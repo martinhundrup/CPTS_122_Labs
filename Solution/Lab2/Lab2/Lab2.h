@@ -25,6 +25,7 @@ typedef struct contact
 	char phone[12]; // ex: 18005557577
 	char email[50];
 	char title[20];
+
 } Contact;
 
 typedef struct node

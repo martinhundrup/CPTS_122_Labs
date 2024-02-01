@@ -1,8 +1,10 @@
 #include "Lab2.h"
+#include "TestList.h"
 
 int main() {
 
-	task_1();
+	runTests();
+	//task_1();
 
 	return 0;
 }
