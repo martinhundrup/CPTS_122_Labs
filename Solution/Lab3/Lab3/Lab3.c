@@ -113,7 +113,7 @@ void task_1() {
 		}
 		else if (choice == 6) { // edit contact
 
-			printf("\please enter the contact name: ");
+			printf("please enter the contact name: ");
 			char temp[50];
 			fgets(temp, 49, stdin);
 			Contact c;
@@ -129,7 +129,7 @@ void task_1() {
 		}
 		else if (choice == 7) { // delete contact
 
-			printf("\please enter the contact name: ");
+			printf("please enter the contact name: ");
 			char temp[50];
 			fgets(temp, 49, stdin);
 			Contact c;
@@ -423,7 +423,7 @@ void printListInOrder(Node* pList) {
 	// edge case 1: the list is empty
 	if (pCur == NULL) {
 
-		return TRUE;
+		return;
 	}
 
 	// loop to print

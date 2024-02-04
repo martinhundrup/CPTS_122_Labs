@@ -19,6 +19,8 @@ Bool testMakeNode() {
 
 		return FALSE; // failed second test
 	}
+
+	return TRUE; // all the tests past
 }
 
 Bool testIsEmptyTrue() {

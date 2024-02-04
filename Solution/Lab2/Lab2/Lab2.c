@@ -125,7 +125,7 @@ void task_1() {
 		}
 		else if (choice == 5) { // edit contact
 
-			printf("\please enter the contact name: ");
+			printf("\nplease enter the contact name: ");
 			char temp[50];
 			fgets(temp, 49, stdin);
 			Contact c;
@@ -141,7 +141,7 @@ void task_1() {
 		}
 		else if (choice == 6) { // delete contact
 
-			printf("\please enter the contact name: ");
+			printf("\nplease enter the contact name: ");
 			char temp[50];
 			fgets(temp, 49, stdin);
 			Contact c;
@@ -395,7 +395,7 @@ void printList(Node* pList) {
 	// edge case 1: the list is empty
 	if (pList == NULL) {
 
-		return TRUE;
+		return;
 	}
 
 	// loop to print
@@ -411,8 +411,6 @@ void printList(Node* pList) {
 		if (pCur != NULL) // can't access the next field of a null value
 			pNext = pCur->pNext;
 	}
-
-	return TRUE;
 }
 
 // displays the program menu

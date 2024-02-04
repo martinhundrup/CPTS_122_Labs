@@ -8,13 +8,15 @@
 
 #include "Lab4.h"
 
+#endif 
+
 /// <summary>
 /// Contains a key and a pointer to the next node.
 /// </summary>
 typedef struct node {
 
 	double key;
-	Node* pNext;
+	struct node* pNext;
 } Node;
 
 /// <summary>
@@ -51,5 +53,3 @@ void pop(Node** pHead);
 /// <param name="pHead">: a pointer to the head of the stack.</param>
 /// <returns>The data stored in the top node.</returns>
 double peek(Node* pHead);
-
-#endif 

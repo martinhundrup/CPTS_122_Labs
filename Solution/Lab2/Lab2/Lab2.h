@@ -49,6 +49,11 @@ which consists of a Contact and a pointer to the next Contact in the list.
 */
 void task_1();
 
+// runs all test and outputs the results to the screen
+// a 1 means it passed, a 0 means it failed
+// note that the print list and edit contact tests are expected to fail
+void runTests();
+
 // Description: Allocates space for a Node on the heap and initializes 
 // the Node with the information found in newData.
 // Returns: The address of the start of the block of memory on the heap or NULL if no memory was allocated
