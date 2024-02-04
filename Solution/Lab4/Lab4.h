@@ -12,6 +12,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+/// <summary>
+/// 0 = FALSE, 1 = TRUE
+/// </summary>
+typedef enum boolean
+{
+	FALSE, TRUE
+} Bool;
+
+
 
 
 #endif 
