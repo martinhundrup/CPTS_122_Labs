@@ -68,7 +68,7 @@ Boolean insertContactInOrder(Node * *pList, Contact newData);
 // Description: Deletes a Contact in the list based on the name field; 
 // deletes the first occurence of the name
 // Returns: TRUE if the Contact was found; FALSE otherwise
-Boolean deleteContact(Node * *pList, Contact searchContact);
+Boolean deleteContact(Node **pList, Contact searchContact);
 
 // Description: Edits a Contact in the list based on the name field; 
 // edits the first occurence of the name
