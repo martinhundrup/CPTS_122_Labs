@@ -52,5 +52,4 @@ void pop(Node** pHead);
 /// <returns>The data stored in the top node.</returns>
 double peek(Node* pHead);
 
-
 #endif 
