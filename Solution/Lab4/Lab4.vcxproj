@@ -130,6 +130,7 @@
     <ClInclude Include="Lab4.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="TestStack.h" />
+    <ClInclude Include="TowerOfHanoi.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab4.c" />

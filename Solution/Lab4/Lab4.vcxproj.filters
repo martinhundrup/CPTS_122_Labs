@@ -24,6 +24,9 @@
     <ClInclude Include="TestStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TowerOfHanoi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stack.c">

@@ -62,4 +62,9 @@ Bool testPeekEmpty();
 /// <returns>TRUE if passes, FALSE if failed</returns>
 Bool testPeekFull();
 
+/// <summary>
+/// Runs all test cases and outputs results to the screen.
+/// </summary>
+void run_tests();
+
 #endif
