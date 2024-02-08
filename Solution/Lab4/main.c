@@ -1,9 +1,14 @@
 #include "Lab4.h"
-#include "TestStack.h"
+#include "TowerOfHanoi.h"
 
 int main()
 {
-	run_tests();
+	//run_tests();
+
+	play_game();
+
+
+
 
 	return 0;
 }

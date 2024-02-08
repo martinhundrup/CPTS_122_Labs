@@ -41,5 +41,8 @@
     <ClCompile Include="TestStack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TowerOfHanoi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
