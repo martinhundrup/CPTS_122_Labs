@@ -4,6 +4,7 @@ int main() {
 
 	Complex c1 = Complex(1.5, 2.5);
 	Complex c2 = Complex(3.5, 4.5);
+	Complex cTest = Complex();
 
 	Complex c3 = c1.add(c2);
 

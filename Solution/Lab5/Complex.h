@@ -18,7 +18,7 @@ public:
 	/// Default constructor. Initializes all values to 0.
 	/// </summary>
 	Complex();
-
+	
 	/// <summary>
 	/// Overloaded constructor. Initializes values to those passed in.
 	/// </summary>
