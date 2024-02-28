@@ -24,4 +24,9 @@ public:
 	/// Tests the Queue class's dequeue() function.
 	/// </summary>
 	bool test_dequeue();
+
+	/// <summary>
+	/// Tests the Queue class's destroy() function.
+	/// </summary>
+	bool test_destroy();
 };

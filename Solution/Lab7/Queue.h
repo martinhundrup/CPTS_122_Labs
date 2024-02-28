@@ -34,6 +34,25 @@ private:
 		printQueue(pCur->getNextPtr());
 	}
 
+	/// <summary>
+	/// Recursive helper function for destroying all nodes in the queue.
+	/// </summary>
+	/// <param name="pCur">The current node to destroy.</param>
+	/// <returns>The number of nodes destroyed.</returns>
+	int destroyNodes(Node<T>* pCur) {
+
+		if (pCur == nullptr) { // base case: we reached end
+			return 0;
+		}
+
+		// save reference to next node
+		Node<T>* pTemp = pCur->getNextPtr();
+		delete(pCur);
+
+		// recursive call
+		return 1 + destroyNodes(pTemp);
+	}
+
 public:
 
 	/// <summary>
@@ -42,6 +61,14 @@ public:
 	Queue() {
 
 		pHead = pTail = nullptr;
+	}
+
+	/// <summary>
+	/// Destructor. Deletes all dynamically allocated nodes in the queue.
+	/// </summary>
+	~Queue() {
+
+		destroy();
 	}
 
 	/// <summary>
@@ -147,6 +174,17 @@ public:
 
 		// recurse to next node
 		return printQueue(lhs, pCur->getNextPtr());
+	}
+
+	/// <summary>
+	/// Deletes every node in the current queue.
+	/// </summary>
+	/// <returns>The number of nodes destroyed.</returns>
+	int destroy() {
+
+		int val = destroyNodes(pHead);
+		pHead = pTail = nullptr;
+		return val;
 	}
 };
 

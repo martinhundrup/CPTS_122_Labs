@@ -8,6 +8,7 @@ void TestQueue::runTests() {
 	std::cout << "result of test_isEmpty(): " << test_isEmpty() << std::endl;
 	std::cout << "result of test_enqueue(): " << test_enqueue() << std::endl;
 	std::cout << "result of test_dequeue(): " << test_dequeue() << std::endl;
+	std::cout << "result of test_destroy(): " << test_destroy() << std::endl;
 }
 
 /// <summary>
@@ -63,4 +64,21 @@ bool TestQueue::test_dequeue() {
 	bool val3 = boolQueue.dequeue() == false;
 
 	return val1 && val2 && val3;
+}
+
+/// <summary>
+/// Tests the Queue class's destroy() function.
+/// </summary>
+bool TestQueue::test_destroy() {
+
+	Queue<int> emptyQueue;
+	int val1 = emptyQueue.destroy();
+
+	Queue<int> fullQueue;
+	fullQueue.enqueue(1);
+	fullQueue.enqueue(2);
+	fullQueue.enqueue(3);
+	int val2 = fullQueue.destroy();
+
+	return val1 == 0 && val2 == 3 && emptyQueue.getHeadPtr() == nullptr && fullQueue.getHeadPtr() == nullptr;
 }
