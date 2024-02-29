@@ -2,26 +2,27 @@
 
 int main(void) {
 
-	/// queue of queues
+	///// queue of queues
 
-	/*Queue<std::string> stringQueue1;
-	stringQueue1.enqueue("hello");
-	stringQueue1.enqueue("world");
+	//Queue<std::string> stringQueue1;
+	//stringQueue1.enqueue("hello");
+	//stringQueue1.enqueue("world");
 
-	Queue<std::string> stringQueue2;
-	stringQueue2.enqueue("my");
-	stringQueue2.enqueue("name");
+	//Queue<std::string> stringQueue2;
+	//stringQueue2.enqueue("my");
+	//stringQueue2.enqueue("name");
 
-	Queue<std::string> stringQueue3;
-	stringQueue3.enqueue("is");
-	stringQueue3.enqueue("bob!");
+	//Queue<std::string> stringQueue3;
+	//stringQueue3.enqueue("is");
+	//stringQueue3.enqueue("bob!");
 
-	Queue<Queue<std::string>> queue;
-	queue.enqueue(stringQueue1);
-	queue.enqueue(stringQueue2);
-	queue.enqueue(stringQueue3);
+	//Queue<Queue<std::string>> queue;
+	//queue.enqueue(stringQueue1);
+	//queue.enqueue(stringQueue2);
+	//queue.enqueue(stringQueue3);
 
-	std::cout << queue << std::endl;*/
+	////std::cout << stringQueue1 << std::endl;
+	//std::cout << queue << std::endl;
 
 	/// queue of queue of queues
 
@@ -34,12 +35,12 @@ int main(void) {
 	queue2.enqueue(4);
 
 	Queue<int> queue3;
-	queue1.enqueue(5);
-	queue1.enqueue(6);
+	queue3.enqueue(5);
+	queue3.enqueue(6);
 
 	Queue<int> queue4;
-	queue2.enqueue(7);
-	queue2.enqueue(8);
+	queue4.enqueue(7);
+	queue4.enqueue(8);
 
 	Queue<Queue<int>> queue10;
 	queue10.enqueue(queue1);
@@ -56,7 +57,6 @@ int main(void) {
 	std::cout << queue100 << std::endl;*/
 
 	// bonus pts: what's the expected output?
-
 
 	TestQueue testQueue;
 	testQueue.runTests();

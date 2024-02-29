@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Node.h"
 
 template <typename T>
@@ -39,7 +38,7 @@ private:
 	/// </summary>
 	/// <param name="pCur">The current node to destroy.</param>
 	/// <returns>The number of nodes destroyed.</returns>
-	int destroyNodes(Node<T>* pCur) {
+	int destroyNode(Node<T>* pCur) {
 
 		if (pCur == nullptr) { // base case: we reached end
 			return 0;
@@ -50,7 +49,7 @@ private:
 		delete(pCur);
 
 		// recursive call
-		return 1 + destroyNodes(pTemp);
+		return 1 + destroyNode(pTemp);
 	}
 
 public:
@@ -68,7 +67,7 @@ public:
 	/// </summary>
 	~Queue() {
 
-		destroy();
+		//destroy();
 	}
 
 	/// <summary>
@@ -142,7 +141,7 @@ public:
 
 		// if we deleted the last item in the queue, update the tail to reflect this
 		if (isEmpty()) {
-			pHead = nullptr;
+			pHead = pTail = nullptr;
 		}
 
 		return data;
@@ -182,7 +181,7 @@ public:
 	/// <returns>The number of nodes destroyed.</returns>
 	int destroy() {
 
-		int val = destroyNodes(pHead);
+		int val = destroyNode(pHead);
 		pHead = pTail = nullptr;
 		return val;
 	}

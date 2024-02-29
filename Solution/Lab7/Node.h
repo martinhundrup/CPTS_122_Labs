@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Lab7.h"
 
 template <typename T>
