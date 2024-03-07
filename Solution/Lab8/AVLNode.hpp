@@ -69,7 +69,7 @@ public:
 	/// Overloaded constructed; intializes key with a passed in value.
 	/// </summary>
 	/// <param name="nKey">The value to store in the node.</param>
-	AVLNode(T nKey) {
+	AVLNode(const T& nKey) {
 
 		key = nKey;
 		pLeft = pRight = nullptr;

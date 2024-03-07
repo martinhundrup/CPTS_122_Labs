@@ -41,6 +41,7 @@ private:
 				depth(pCur);
 				return true;
 			}
+			depth(pCur);
 
 			return insert(pCur->getLeft(), nKey); // recurive insert call
 		}
@@ -52,8 +53,8 @@ private:
 				depth(pCur);
 				return true;
 			}
-
 			depth(pCur);
+
 			return insert(pCur->getRight(), nKey);
 		}
 	}
