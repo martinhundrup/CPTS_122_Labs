@@ -46,6 +46,28 @@ Stack<T>::~Stack()
 	delete[] mTop; // this is how we free up an array on the heap in C++
 }
 
+//// Places the newItem at the top of the stack
+//template <class T>
+//bool Stack<T>::push(T& newItem)
+//{
+//	// do note insert if max size has been reached
+//	if (mSize >= mMaxSize) {
+//
+//		return false;
+//	}
+//
+//	// shift everything to the right
+//	for (int i = mSize; i > 0; i--) {
+//
+//		mTop[i] = mTop[i - 1];
+//	}
+//
+//	mTop[0] = newItem;
+//	mSize++;
+//
+//	return true;
+//}
+
 // Places the newItem at the top of the stack
 template <class T>
 bool Stack<T>::push(T& newItem)
@@ -56,17 +78,36 @@ bool Stack<T>::push(T& newItem)
 		return false;
 	}
 
-	// shift everything to the right
-	for (int i = mSize; i > 0; i--) {
-
-		mTop[i] = mTop[i - 1];
-	}
-
-	mTop[0] = newItem;
-	mSize++;
+	mTop[mSize++] = newItem;
 
 	return true;
 }
+
+//// In this implementation you will apply defensive design. You must check to 
+//// see if the stack is empty or not before you pop. Places the popped item in 
+//// the parameter referred to as "poppedItem". Returns true if the item was popped; false
+//// otherwise.
+//template <class T>
+//bool Stack<T>::pop(T& poppedItem)
+//{
+//	// check for empty stack
+//	if (isEmpty()) {
+//
+//		return false;
+//	}
+//	
+//	// store top item
+//	poppedItem = mTop[0];
+//
+//	// shift everything left
+//	for (int i = 0; i < mSize; i++) {
+//
+//		mTop[i] = mTop[i + 1];
+//	}
+//
+//	mSize--;
+//	return true;
+//}
 
 // In this implementation you will apply defensive design. You must check to 
 // see if the stack is empty or not before you pop. Places the popped item in 
@@ -80,19 +121,31 @@ bool Stack<T>::pop(T& poppedItem)
 
 		return false;
 	}
-	
+
 	// store top item
-	poppedItem = mTop[0];
+	poppedItem = mTop[--mSize];
 
-	// shift everything left
-	for (int i = 0; i < mSize; i++) {
-
-		mTop[i] = mTop[i + 1];
-	}
-
-	mSize--;
 	return true;
 }
+
+//// In this implementation you will apply defensive design. You must check to 
+//// see if the stack is empty or not before you peek. Places the item at the top of the
+//// stack in the parameter referred to as "item". Returns true if there
+//// is an item at the top; false otherwise.
+//template <class T>
+//bool Stack<T>::peek(T& item)
+//{
+//	// check for empty stack
+//	if (isEmpty()) {
+//
+//		return false;
+//	}
+//
+//	// store top item
+//	item = mTop[0];
+//
+//	return true;
+//}
 
 // In this implementation you will apply defensive design. You must check to 
 // see if the stack is empty or not before you peek. Places the item at the top of the
@@ -108,7 +161,7 @@ bool Stack<T>::peek(T& item)
 	}
 
 	// store top item
-	item = mTop[0];
+	item = mTop[mSize - 1];
 
 	return true;
 }
