@@ -46,18 +46,21 @@ int main() {
 
 	//tester.Test(item1, item2);
 
-	/*Stack<int> stack;
-	int i1 = 1, i2 = 2, i3 = 3;
-	stack.push(i1);
-	stack.push(i2);
-	stack.push(i3);
+	//Stack<int> stack;
+	//int i1 = 1, i2 = 2, i3 = 3;
+	//stack.push(i1);
+	//stack.push(i2);
+	//stack.push(i3);
 
-	int temp = 0;
-	for (int i = 0; i < 3; i++) {
-		
-		stack.pop(temp);
-		std::cout << temp << std::endl;
-	}*/
+	//int temp = 0;
+	//for (int i = 0; i < 3; i++) {
+	//	
+	//	stack.peek(temp);
+	//	std::cout << temp << std::endl;
+
+	//	stack.pop(temp);
+	//	std::cout << temp << std::endl;
+	//}
 
 	//PostfixEvaluator postfixEvaluator("2 3 ^ 5 * =");
 	//std::cout << postfixEvaluator.evaluate("1 2 + 4 * =") << std::endl;
