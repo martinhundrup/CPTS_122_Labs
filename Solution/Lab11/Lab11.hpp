@@ -2,6 +2,7 @@
 #include <iostream>
 #include <list>
 #include <sstream>
+#include <vector>
 
 using std::string;
 using std::ostream;

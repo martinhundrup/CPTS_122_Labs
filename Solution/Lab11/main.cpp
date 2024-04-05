@@ -1,5 +1,4 @@
-#include "Registration.hpp"
-//#include "Teacher.hpp"
+#include "Teacher.hpp"
 
 int main() {
 
@@ -25,8 +24,6 @@ int main() {
 	y.addCourse("honors 390", 3, 94.5); // somehow deep copy lol
 	std::cout << s << std::endl;
 	std::cout << y << std::endl;
-
-	//task_6();
 
 	return 0;
 }

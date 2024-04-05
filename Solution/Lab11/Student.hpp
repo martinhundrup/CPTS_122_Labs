@@ -14,6 +14,11 @@ public:
 
 	using Person::Person; // inherits constructor
 
+	Student(int x, string s, Gender g, double d, int c, int cred) : Person(x, s, g, d) {
+		coursesTaken = c;
+		totalCredits = cred;
+	}
+
 	Student(std::list<Course> nCourses = std::list<Course>(),
 		int nCoursesTaken = 0, int nTotalCredits = 0) {
 		courses = nCourses;

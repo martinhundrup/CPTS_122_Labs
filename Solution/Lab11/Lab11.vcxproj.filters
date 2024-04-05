@@ -30,15 +30,9 @@
     <ClInclude Include="Teacher.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Registration.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Registration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
