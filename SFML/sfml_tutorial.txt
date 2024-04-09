@@ -1,0 +1,49 @@
+create an empty C++ project
+add a main.cpp to source files
+
+add/change the following settings:
+
+Project >> properties:
+
+	>> C/C++ >> General >> Additional Include Directories >> (all configs)
+		(dir)\SFML-2.6.1-windows-vc17-64-bit\SFML-2.6.1\include
+	>> C/C++ >> Preprocessor >> (all configs)
+		SFML_STATIC
+	>> Linker >> General >> Additional Library Directories >> (all configs)
+		(dir)\SFML-2.6.1-windows-vc17-64-bit\SFML-2.6.1\lib
+	>> Linker >> Input >> Additional Dependencies >> (Debug)
+		$(CoreLibraryDependencies);%(AdditionalDependencies);sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-main-d.lib;sfml-audio-s-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;
+	
+	>> Linker >> Input >> Additional Dependencies >> (Release)
+		$(CoreLibraryDependencies);%(AdditionalDependencies);sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib;sfml-audio-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;
+
+find 'openal32.dll' in (dir)\SFML-2.6.1-windows-vc17-64-bit\SFML-2.6.1\bin
+	- copy paste this into your project directory where your main.cpp is located
+
+copy paste the following into main:
+
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+
+int main()
+{
+    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
+
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        window.clear();
+        window.draw(shape);
+        window.display();
+    }
+
+    return 0;
+}
